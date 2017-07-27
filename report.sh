@@ -35,8 +35,8 @@ do
                   if [[ "$d" == *"unknown"* ]]; then
                       NOTE=""
                   fi
-		  if [ -f repos/$r/$r.live.not_index/$r.$t.not_index.$d.txt ]; then
-			num=`less repos/$r/$r.live.not_index/$r.$t.not_index.$d.txt|grep -v data_type|wc -l`
+		  if [ -f repos/$r/$r.$t.not_index.$d.txt ]; then
+			num=`less repos/$r/$r.$t.not_index.$d.txt|grep -v data_type|wc -l`
 			printf "\t\t\t\t%s\t%10s\t\t%s\n" $d $num $NOTE >> repos/$r.report.txt
 		  fi
 		done

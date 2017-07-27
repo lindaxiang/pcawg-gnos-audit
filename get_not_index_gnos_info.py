@@ -167,9 +167,9 @@ def main():
             conf[r.get('base_url')] = r.get('repo_code')
             file_path = '/'.join(['repos', r.get('repo_code')])
             annotations = read_annotations(annotations, r.get('repo_code'), file_path)
-            path = '/'.join(['repos', r.get('repo_code'), r.get('repo_code')+'.live.not_index'])
-            if os.path.exists(path): shutil.rmtree(path)
-            os.makedirs(path)
+            # path = '/'.join(['repos', r.get('repo_code'), r.get('repo_code')+'.live.not_index'])
+            # if os.path.exists(path): shutil.rmtree(path)
+            # os.makedirs(path)
 #            print annotations.keys()
             for f in get_xml_files( latest_metadata_dir, conf, r.get('repo_code'), annotations):
                 f = os.path.join(index_work_dir, metadata_dir, '__all_metadata_xml', f)
@@ -219,7 +219,7 @@ def main():
 
 
                     field_names = sorted(info.keys())
-                    output_file = '/'.join([path, r.get('repo_code')+'.live.not_index.'+info['data_type']+'.txt'])
+                    output_file = '/'.join(['repos', r.get('repo_code'), r.get('repo_code')+'.live.not_index.'+info['data_type']+'.txt'])
                     if not os.path.exists(output_file):
                         header_printed = False
                     with open(output_file, 'a') as o:  
