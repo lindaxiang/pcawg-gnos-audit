@@ -155,9 +155,7 @@ def main():
         conf = yaml.safe_load(f)
 
         index_work_dir = conf.get('index_work_dir')
-        print index_work_dir
         metadata_dir = conf.get('metadata_dir')
-        print '/'.join([index_work_dir, metadata_dir])
         latest_metadata_dir = find_latest_metadata_dir(os.path.join(index_work_dir, metadata_dir))
 
         annotations = {}
@@ -221,7 +219,7 @@ def main():
 
 
                     field_names = sorted(info.keys())
-                    output_file = '/'.join([path, r.get('repo_code')+'.live.'+info['data_type']+'.txt'])
+                    output_file = '/'.join([path, r.get('repo_code')+'.live.not_index.'+info['data_type']+'.txt'])
                     if not os.path.exists(output_file):
                         header_printed = False
                     with open(output_file, 'a') as o:  
