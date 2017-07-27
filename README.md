@@ -13,7 +13,7 @@ index_work_dir: /pancancer_dot_info/data/pancancer-sandbox/pcawg_metadata_parser
 ### Installing
 Get the source script of the tool
 ```
-git clone git@github.com:lindaxiang/ega_script.git
+git clone https://github.com/lindaxiang/pcawg-gnos-audit.git
 ```
 
 ### Running the tool
