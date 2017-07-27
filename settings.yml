@@ -1,0 +1,37 @@
+# YAML for settings
+
+index_work_dir: /pancancer_dot_info/data/pancancer-sandbox/pcawg_metadata_parser
+metadata_dir: gnos_metadata
+
+gnos_repos:
+  - 
+    repo_location: London
+    repo_code: ebi
+    base_url: https://gtrepo-ebi.annailabs.com/
+    cgquery_para: "state=*&-study=PCAWG\\ 2.0"
+  - 
+    repo_location: Barcelona
+    repo_code: bsc
+    base_url: https://gtrepo-bsc.annailabs.com/
+    cgquery_para: study=*
+  - 
+    repo_location: Heidelberg
+    repo_code: dkfz
+    base_url: https://gtrepo-dkfz.annailabs.com/
+    cgquery_para: study=*
+  - 
+    repo_location: Tokyo
+    repo_code: riken
+    base_url: https://gtrepo-riken.annailabs.com/
+    cgquery_para: study=*
+  - 
+    repo_location: Chicago (ICGC)
+    repo_code: osdc-icgc
+    base_url: https://gtrepo-osdc-icgc.annailabs.com/
+    cgquery_para: study=*
+  - 
+    repo_location: Chicago (TCGA)
+    repo_code: osdc-tcga
+    base_url: https://gtrepo-osdc-tcga.annailabs.com/
+    cgquery_para: study=*
+
